@@ -2,16 +2,16 @@
 
 // class Solution {
 // public:
-    
+
 //     vector<vector<int>> levelOrder(TreeNode* root) {
-        
+
 //         vector<vector<int>> ans;
 //         if(root==NULL){
-            
+
 //             return ans;
-            
+
 //         }
-        
+
 //         vector<int>helper;
 //         queue<TreeNode*>q;
 //         q.push(root);
@@ -27,28 +27,19 @@
 //              if(top->right!=NULL){
 //                  q.push(top->right);
 //              }
-                
+
 //             }else{
 //                 ans.push_back(helper);
 //                 if(q.size()>0){
-//                      q.push(NULL);  
+//                      q.push(NULL);
 //                      helper.clear();
 //                 }
-               
-               
-                
+
 //             }
-            
+
 //         }
-        
+
 //         return ans;
-        
-        
-        
-        
-        
-        
-        
-        
+
 //     }
 // };

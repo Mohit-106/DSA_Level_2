@@ -1,0 +1,1 @@
+//Both faith-expectation and heap mover technique
