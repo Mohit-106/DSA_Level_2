@@ -1,5 +1,4 @@
 // find Brdges vertices in grapg
-
 // class Solution
 // {
 // public:
@@ -58,14 +57,12 @@
 //         int idx = 0;
 //         for (int i : aps)
 //         {
-
 //             res[idx] = i;
 //             idx++;
 //         }
 //         return res;
 //     }
 // };
-
 // // { Driver Code Starts.
 // int main()
 // {
