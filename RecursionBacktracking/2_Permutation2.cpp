@@ -1,8 +1,6 @@
-
 // class Solution {
 // public:
 //     vector<vector<int>>ans;
-   
 //     void permuteHelper(vector<int>&nums, int idx){
 //         if(idx==nums.size()-1){
 //             ans.push_back(nums);
