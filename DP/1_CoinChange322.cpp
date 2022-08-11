@@ -8,14 +8,11 @@
 //         dp[0]=0;
 //         for(int i=0;i<coins.size();i++){
 //             int coin = coins[i];
-            
 //             for(int j=1;j<dp.size();j++){
 //                 if(coin<=j && dp[j-coin]!=INT_MAX){
 //                     dp[j]=min((dp[j-coin]+1),dp[j]);
 //                 }
-                 
 //             }
-                       
 //         }
 //         if(dp[amount]==INT_MAX){
 //             return -1;

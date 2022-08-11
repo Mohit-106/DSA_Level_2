@@ -50,10 +50,3 @@ June 20
     Graphs -> https://codeforces.com/contest/1541/problem/C
     Graphs -> https://leetcode.com/problems/maximum-profit-in-job-scheduling/
     Trees -> https://binarysearch.com/problems/Longest-Even-Sum-Path
-
-
-
-
-
-
-

@@ -1,36 +1,60 @@
-//sorted node in same position
-//here at the palce of set we can also use priority queue
-
-
+// /**
+//  * Definition for a binary tree node.
+//  * struct TreeNode {
+//  *     int val;
+//  *     TreeNode *left;
+//  *     TreeNode *right;
+//  *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+//  *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+//  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+//  * };
+//  */
 // class Solution {
 // public:
-//     unordered_map<int,vector<int>>mp;
-//     int minHR=0;
-//     int maxHR=0;
-//     void verticalTraversalHelper(TreeNode * node){
+    
+//     int minRange = INT_MAX;
+//     int maxRange = INT_MIN;
+//     map<int,vector<int>>mp;
+//     void range(TreeNode * node , int hl){
+//         if(node){
+//             minRange = min(hl,minRange);
+//             maxRange = max(hl,maxRange);
+//             range(node->left, hl-1);
+//             range(node->right, hl+1);
+//         }
+//     }
+    
+//     class Pair{
+//         public:
+//         TreeNode * node;
+//         int level;
+//         Pair(TreeNode * node, int level){
+//             this->node = node;
+//             this->level = level;
+//         }
         
-//         queue<pair<TreeNode*,int>>q;
-//         q.push(make_pair(node,0));
+//     };
+    
+//     void bfs(TreeNode * node){
+        
+//         queue<Pair*>q;
+//         int r = -1*minRange;
+//         q.push(new Pair(node,r));
 //         while(q.size()>0){
 //             int size = q.size();
-//             multiset<pair<int,int>>s;
+//             priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>>pq;
 //             while(size--){
-//                 auto front = q.front();
+//                 Pair * pr = q.front();
 //                 q.pop();
-//                 minHR = min(minHR,front.second);
-//                 maxHR = max(maxHR,front.second);
-//                 s.insert(make_pair(front.first->val,front.second));
-//                 if(front.first->left!=NULL) q.push(make_pair(front.first->left,front.second-1));
-//                 if(front.first->right!=NULL) q.push(make_pair(front.first->right,front.second+1));
-                
+//                 pq.push(make_pair(pr->node->val,pr->level));
+//                 if(pr->node->left != NULL) q.push(new Pair(pr->node->left,pr->level-1));
+//                 if(pr->node->right!=NULL)q.push(new Pair(pr->node->right,pr->level+1));
 //             }
-//             for(auto pr:s){
-//                  if(mp.find(pr.second)==mp.end()){
-//                   mp[pr.second]=vector<int>();
-//                 }
-//                 mp[pr.second].push_back(pr.first);
-//             }
-           
+//             while(pq.size()>0){
+//                 pair<int,int> pr = pq.top();
+//                 pq.pop();
+//                 mp[pr.second].push_back(pr.first); 
+//             }  
 //         }
         
         
@@ -41,14 +65,13 @@
 //             vector<vector<int>>base;
 //             return base;
 //         }
-        
-//         verticalTraversalHelper(root);
-//         vector<vector<int>>res(maxHR-minHR+1,vector<int>());
-//         for(int i=minHR,j=0;i<=maxHR;i++,j++){
-//             res[j]=mp[i];
+//         range(root,0);
+//         int n = maxRange - minRange + 1;
+//         vector<vector<int>>ans(n,vector<int>());
+//         bfs(root);
+//         for(int i = 0; i<n;i++){
+//             ans[i] = mp[i];
 //         }
-        
-//         return res;
-        
+//         return ans;
 //     }
 // };

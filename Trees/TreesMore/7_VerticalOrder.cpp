@@ -35,7 +35,6 @@
 //         q.push(newpair);
 //         while (q.size() > 0)
 //         {
-
 //             int size = q.size();
 //             vector<Pair *> lv;
 //             while (size--)
