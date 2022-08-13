@@ -1,8 +1,8 @@
-//here test cases to keep in mind 
-//types.size() should be always > name.size() only then we can creat typed string
-//while we are checking the condition name[i-1]==typed[j]-> make sure you are not at 0th idx
-//if may possible i is completely traversed and j is left
-//it may possible that j is processed and i left ->>ex name = acfvz tyoed=vacfvvv
+// here test cases to keep in mind 
+// types.size() should be always > name.size() only then we can creat typed string
+// while we are checking the condition name[i-1]==typed[j]-> make sure you are not at 0th idx
+// if may possible i is completely traversed and j is left
+// it may possible that j is processed and i left ->>ex name = acfvz tyoed=vacfvvv
 
 
 // class Solution {

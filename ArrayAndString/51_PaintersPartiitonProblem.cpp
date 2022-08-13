@@ -4,7 +4,7 @@
 //     long long minTime(int arr[], int n, int k)
 //     {
 
-//         // Firstly identify minimum time and maaximum time possible
+//         // Firstly identify minimum time and maximum time possible
 //         int ltr = INT_MIN; // lowest time required-> when n painters are there
 //         long long htr = 0; // Highest time required-> when only 1 painter is there
 //         for (int i = 0; i < n; i++)

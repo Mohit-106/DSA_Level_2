@@ -51,7 +51,7 @@
 //             addtoqueue(top->i+1,top->j,top->dis+1,grid,q,visited);
 //             addtoqueue(top->i-1,top->j,top->dis+1,grid,q,visited);
 //             addtoqueue(top->i,top->j+1,top->dis+1,grid,q,visited);
-//               addtoqueue(top->i,top->j-1,top->dis+1,grid,q,visited);
+//             addtoqueue(top->i,top->j-1,top->dis+1,grid,q,visited);
 
 //         }
 //         return maxdis;
