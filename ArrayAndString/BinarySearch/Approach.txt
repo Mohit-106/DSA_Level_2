@@ -1,0 +1,14 @@
+1. Decide Range 
+How to decide range?
+Split arrays -> number of partition (if it is 0 then and if it is n).
+Ship -> number of days (if 1 day to if n number of days).
+Painters -> if painters are n and if painters are 1.
+Allocate Books -> if 1 student and if n students
+Koko->minimum 1 and max is max of the array 
+Smallest Divisor-> Smallest divisor will be 1 and largest will be largest of the array
+Balls in bag -> Smallest bag capacity will be 1 and largest can be largest number of balls in a bag
+
+
+2. Now check for mid val and see if this is our ans then does it satisfy the limit given(days/partitons etc.)
+if in <= limit try smaller value if asked
+else try fit ans in range
