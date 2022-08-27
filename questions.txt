@@ -1,0 +1,31 @@
+Q1. //Reverse the stack
+#include <bits/stdc++.h>
+using namespace std;
+void Reverse(stack<int>&input,stack<int>&empty){
+    while(!input.empty()){
+        empty.push(input.top());
+        input.pop();
+    }
+    input = empty;
+}
+int main() {
+    
+    stack<int>input;
+    stack<int>empty;
+    int n;
+    cin>>n;
+    for(int i =1;i<=n;i++){
+        int x;
+        cin>>x;
+        input.push(x);
+    }
+    Reverse(input,empty);
+    while(!input.empty()){
+        cout<<input.top()<<endl;
+        input.pop();
+    }
+    return 0;
+}
+
+
+//
