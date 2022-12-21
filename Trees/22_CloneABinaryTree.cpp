@@ -22,7 +22,6 @@
 //   }
   
 //   void SetRandom(Node * node){
-      
 //       if(node==NULL){
 //           return ;
 //       }

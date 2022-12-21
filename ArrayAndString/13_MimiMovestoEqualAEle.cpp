@@ -3,17 +3,17 @@
 // class Solution {
 // public:
 //     int minMoves2(vector<int>& nums) {
-//         sort(nums.begin(),nums.end());
-//         int i =0;
-//         int j = nums.size()-1;
-//         int res=0;
-//         while(i<j){
-//             res+=(nums[j]-nums[i]);
-//             i++;
-//             j--;
+//         //Step 1 decide what is your target
+//         //Make all element equal target(median)
+//         //If we take median then delta from all the elements will we minimised
+//         sort(nums.begin(), nums.end());
+//         int median  = nums[(nums.size()-1)/2];
+//         int res = 0;
+//         for(int i =0 ; i<nums.size(); i++){
+//             res += abs(median-nums[i]);
 //         }
 //         return res;
-    
+        
 //     }
 // };
 
