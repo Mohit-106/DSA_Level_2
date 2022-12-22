@@ -17,42 +17,42 @@
         
         
         
-//         while(true){
-//             bool f1=false;
-//             bool f2=false;
-//             //acquire
-//             while(i<n-1){
-//                 f1=true;
-//                 i++;
-//                 mp[arr[i]]++;
-//                 if(mp.size()==k){
-//                     ans+=n-i;
-//                     break;
-//                 }
+        // while(true){
+        //     bool f1=false;
+        //     bool f2=false;
+        //     //acquire
+        //     while(i<n-1){
+        //         f1=true;
+        //         i++;
+        //         mp[arr[i]]++;
+        //         if(mp.size()==k){
+        //             ans+=n-i;
+        //             break;
+        //         }
                 
-//             }
-//             //release char and check this cound be a answer or nor
-//             while(j < i){
-//                 f2=true;
-//                 j++;
-//                 if(mp[arr[j]]==1){
-//                     mp.erase(arr[j]);
-//                 }else{
-//                     mp[arr[j]]--;
-//                 }
+        //     }
+        //     //release char and check this cound be a answer or nor
+        //     while(j < i){
+        //         f2=true;
+        //         j++;
+        //         if(mp[arr[j]]==1){
+        //             mp.erase(arr[j]);
+        //         }else{
+        //             mp[arr[j]]--;
+        //         }
                 
-//                 if(mp.size()==k){
-//                     ans+=n-i;
-//                 }else{
-//                      break;
-//                 }
-//             }
+        //         if(mp.size()==k){
+        //             ans+=n-i;
+        //         }else{
+        //              break;
+        //         }
+        //     }
             
-//             if(f1==false && f2==false){
-//                 break;
-//             }
+        //     if(f1==false && f2==false){
+        //         break;
+        //     }
             
-//         }
-//         return ans;
+        // }
+        // return ans;
 //     }
 // };
