@@ -1,41 +1,31 @@
-// class Solution
-// {
+// class Solution {
 // public:
-//     ListNode *oddEvenList(ListNode *head)
-//     {
-//         if (head == NULL || head->next == NULL)
-//         {
+//     ListNode* oddEvenList(ListNode* head) {
+//         if(head==NULL || head->next==NULL || head->next->next==NULL){
 //             return head;
 //         }
-//         ListNode *oddhead = head;
-//         ListNode *evenhead = head->next;
-//         ListNode *odd = oddhead;
-//         ListNode *even = evenhead;
-//         ListNode *temp = head->next->next;
-//         // we need to break more clear by dry run
-//         oddhead->next = NULL;
-//         evenhead->next = NULL;
-//         int count = 1;
-//         while (temp != NULL)
-//         {
-//             ListNode *nxt = temp->next;
-//             temp->next = NULL;
-//             if (count % 2 == 0)
-//             {
-//                 // even
-//                 even->next = temp;
-//                 even = temp;
+
+//         ListNode * ehead = head->next;
+//         ListNode * odd = head;
+//         ListNode * even = head->next;
+
+//         while(odd!=NULL && even!=NULL){
+//             ListNode * temp = even->next;
+//             odd->next = temp;
+//             odd=temp;
+//             if(temp!=NULL){
+//                 even->next = temp->next;
+//                 even = temp->next;
 //             }
-//             else
-//             {
-//                 // odd
-//                 odd->next = temp;
-//                 odd = temp;
-//             }
-//             temp = nxt;
-//             count++;
 //         }
-//         odd->next = evenhead;
-//         return oddhead;
+
+//         ListNode * oddtail = head;
+//         while(oddtail->next != NULL){
+//             oddtail = oddtail->next;
+//         }
+
+//         oddtail->next = ehead;
+//         return head;
+
 //     }
 // };
