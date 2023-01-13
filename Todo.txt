@@ -1,0 +1,6 @@
+13th jan 
+//Bedfore going for interviews
+4. Quick Sort LL
+
+//leetcode
+2.Split linked list.

@@ -17,7 +17,7 @@
 //                 wl[val]--;
 //                 wl[val+1]++;
 //             }
-//             //if no one is looking for val then val will caheck can it start a new group 
+//             //if no one is looking for val then val will check can it start a new group 
 //             else if(av[val]>0 && av[val+1]>0 && av[val+2]>0){
 //                 av[val]--;
 //                 av[val+1]--;
