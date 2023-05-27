@@ -50,3 +50,10 @@ June 20
     Graphs -> https://codeforces.com/contest/1541/problem/C
     Graphs -> https://leetcode.com/problems/maximum-profit-in-job-scheduling/
     Trees -> https://binarysearch.com/problems/Longest-Even-Sum-Path
+
+
+
+Graph left questions
+4.https://practice.geeksforgeeks.org/problems/find-the-maximum-flow2126/1
+5.https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/
+6.https://practice.geeksforgeeks.org/problems/maximum-bipartite-matching/1

@@ -1,4 +1,4 @@
-// // when one nnumber can only be used once
+// // when one number can only be used once
 
 // class Solution
 // {
