@@ -8,7 +8,3 @@
 6. Hashmap implementation.
 ------------------------------------------------------------------------------------------------------------------
 1. Peak element, Candy, Morgan Stanley OA question.
-
-#. Graph Hard problem to solve later
-  1. Bus routes
-  2. Sum of Distances in tree  
