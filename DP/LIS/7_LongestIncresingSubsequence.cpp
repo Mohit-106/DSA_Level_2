@@ -1,4 +1,4 @@
-//n^2 Approach
+// n^2 Approach
 // class Solution {
 // public:
 //     int lengthOfLIS(vector<int>& nums) {
@@ -27,10 +27,8 @@
 //     }
 // };
 
-//nlog(n) solution
-
-//24 Aug class
-
+// nlog(n) solution
+// 24 Aug class
 // class Solution {
 // public:
     
@@ -43,7 +41,7 @@
 //             }else if(tails[mid]<tar){
 //                 lo = mid+1;
 //             }else{
-//                 return;
+//
 //             }
 //         }
 //         //upper bound
