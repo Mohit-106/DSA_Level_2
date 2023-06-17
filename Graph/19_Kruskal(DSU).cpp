@@ -92,7 +92,6 @@ int main()
 
         Edge top = pq.top();
         pq.pop();
-        // cout<<top.src<<"-"<<top.nbr<<"-"<<top.wt<<endl;
         int srcLeader = find(top.src, par, rank);
         int nbrLeader = find(top.nbr, par, rank);
 
@@ -101,6 +100,7 @@ int main()
             cout << top.src << "-" << top.nbr << "@" << top.wt << endl;
             Union(srcLeader, nbrLeader, par, rank);
         }
+        
     }
 
     return 0;

@@ -14,48 +14,47 @@ public:
     }
 };
 
-TreeNode *rms(TreeNode *ln, TreeNode *cn)
-{
 
-    while (ln->right != NULL && ln->right != cn)
-    {
-        ln = ln->right;
-    }
+TreeNode * rightmostnode(TreeNode * node, TreeNode * curr){
 
-    return ln;
+	while(node->right != NULL && node->right != curr){
+		node = node->right;
+	}
+	return node;
 }
+
+
 
 vector<int> morrisInTraversal(TreeNode *root)
 {
 
-    TreeNode *cn = root;
-    vector<int> res;
-    while (cn != NULL)
-    {
-        TreeNode *ln = cn->left;
-        if (ln == NULL)
-        {
-            res.push_back(cn->val);
-            cn = cn->right;
-        }
-        else
-        {
-            TreeNode *rightmostNode = rms(ln, cn);
-            if (rightmostNode->right == NULL)
-            {
-                rightmostNode->right = cn;
-                cn = cn->left;
-            }
-            else
-            {
-                res.push_back(cn->val);
-                rightmostNode->right = NULL;
-                cn = cn->right;
-            }
-        }
-    }
+	vector<int>ans;
+	TreeNode * curr = root;
 
-    return res;
+	while(curr!=NULL){
+
+		TreeNode * left = curr->left;
+		if(left==NULL){
+			ans.push_back(curr->val);
+			curr=curr->right;
+		}else{
+			TreeNode *  rmn= rightmostnode(left,curr);
+			if(rmn->right==curr){
+				rmn->right = NULL;
+				ans.push_back(curr->val);
+				curr = curr->right;
+			}else{
+				rmn->right = curr;
+				curr = curr->left;
+			}
+			
+		}
+
+	}
+
+	return ans;
+
+   
 }
 
 // input_section=================================================

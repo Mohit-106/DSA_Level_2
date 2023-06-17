@@ -30,21 +30,21 @@
 //         DFS(q, grid, visited, i, j - 1);
 //     }
 
-//     void addnbr(vector<vector<int>> &grid, vector<vector<bool>> &visited2, vector<vector<bool>> &visited1, int i, int j, int level, queue<Pair *> &q)
-//     {
+    // void addnbr(vector<vector<int>> &grid, vector<vector<bool>> &visited2, vector<vector<bool>> &visited1, int i, int j, int level, queue<Pair *> &q)
+    // {
 
-//         if (i < 0 || j < 0 || i >= grid.size() || j >= grid[0].size() || visited2[i][j] == true)
-//         {
-//             return;
-//         }
-//         else if (visited1[i][j] == true)
-//         {
-//             return;
-//         }
+    //     if (i < 0 || j < 0 || i >= grid.size() || j >= grid[0].size() || visited2[i][j] == true)
+    //     {
+    //         return;
+    //     }
+    //     else if (visited1[i][j] == true)
+    //     {
+    //         return;
+    //     }
 
-//         Pair *newpair = new Pair(i, j, level);
-//         q.push(newpair);
-//     }
+    //     Pair *newpair = new Pair(i, j, level);
+    //     q.push(newpair);
+    // }
 
 //     int shortestBridge(vector<vector<int>> &grid)
 //     {

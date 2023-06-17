@@ -1,10 +1,13 @@
 ->Additional questiond
-0. LRU cache and LFU cache.
 1. Quicksort ll.
 2. Merge Sort time complexity analysis.
-3. AVL.
-4. Segment tree.
-5. Priority queue implementation.
-6. Hashmap implementation.
 ------------------------------------------------------------------------------------------------------------------
 1. Peak element, Candy, Morgan Stanley OA question.
+
+//Implementation
+1. Priority Queue
+2. Hashmap
+3. AVL
+4. Segment tree
+5. LRU cache 
+6. LFU cache

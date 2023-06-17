@@ -1,5 +1,15 @@
-// gfg->Mothe Vertex
+// If i can reach mother vertex then i am also a mother vertex
+// But if there is only one mother vertex it means that nobody can reach mother vertex
+// so only mother vertex can make all vertex visited 
 
+//Step 1 let 0 be the mother vertex then make is mother vertex and make call
+// dfs call will stop only if we have processes the mother vertex
+
+
+
+
+
+// gfg->Mothe Vertex
 // class Solution
 // {
 //     public:

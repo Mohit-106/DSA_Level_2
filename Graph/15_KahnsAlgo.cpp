@@ -35,7 +35,6 @@
 // 	            if(indegree[nbr]==0){
 // 	                q.push(nbr);
 // 	            }
-	            
 // 	        }
 	        
 // 	    }

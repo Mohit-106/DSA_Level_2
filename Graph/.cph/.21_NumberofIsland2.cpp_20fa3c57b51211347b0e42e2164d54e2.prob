@@ -1,0 +1,1 @@
+{"name":"Local: 21_NumberofIsland2","url":"c:\\Users\\91701\\Desktop\\Pepcoding\\DSA_Level_2\\Graph\\21_NumberofIsland2.cpp","tests":[{"id":1686253765100,"input":"3 3 4\n0 0\n0 1\n1 2\n2 1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\91701\\Desktop\\Pepcoding\\DSA_Level_2\\Graph\\21_NumberofIsland2.cpp","group":"local","local":true}
