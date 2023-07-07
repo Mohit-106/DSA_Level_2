@@ -1,0 +1,1 @@
+// Median is a point where all element can meet

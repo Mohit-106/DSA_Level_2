@@ -4,30 +4,42 @@
 //     bool validateStackSequences(vector<int> &pushed, vector<int> &popped)
 //     {
 
-//         stack<int> st;
+//         int i = 0;
 //         int j = 0;
-//         for (int i = 0; i < pushed.size() && j < popped.size(); i++)
+
+//         stack<int> st;
+
+//         while (i < pushed.size() && j < popped.size())
 //         {
-//             st.push(pushed[i]);
-//             while (st.size() > 0 && st.top() == popped[j])
+
+//             if (st.size() == 0)
 //             {
-//                 st.pop();
-//                 j++;
-//             }
-//         }
-//         while (j < popped.size())
-//         {
-//             if (st.top() == popped[j])
-//             {
-//                 st.pop();
-//                 j++;
+//                 st.push(pushed[i]);
 //             }
 //             else
 //             {
-//                 return false;
+
+//                 while (st.size() > 0 && st.top() == popped[j])
+//                 {
+//                     st.pop();
+//                     j++;
+//                 }
+
+//                 st.push(pushed[i]);
 //             }
+//             i++;
 //         }
 
-//         return st.size() == 0;
+//         while (st.size() > 0 && j < popped.size())
+//         {
+//             if (popped[j] != st.top())
+//             {
+//                 return false;
+//             }
+//             st.pop();
+//             j++;
+//         }
+
+//         return true;
 //     }
 // };

@@ -1,28 +1,37 @@
 // class Solution {
 //   public:
 //     int findMaxLen(string s) {
+        
+        
 //         stack<int>st;
-//         int res = 0;
-//         st.push(-1);  
-//         for(int i = 0; i<s.size(); i++){
-//             if(s[i]=='('){
+//         st.push(-1);
+//         int ans = 0;
+//         for(int i=0; i<s.size(); i++){
+            
+//             char ch = s[i];
+//             if(ch=='('){
 //                 st.push(i);
-//             }else{
-//                 st.pop();
-                  //when -1 is removes and st.size() becomes 0 then we push ) paranthesis
-                  //ans start new substring considering this as -1 because it can not 
-                  //contribute in subsequence
-                  //((()))()((((()) Dry run this for better understanding
-                  //(())() )) ()()()((()))
-//                 if(st.size()>0){
-//                     int length = i-st.top();
-//                     res=max(res,length);
+//             }else if(st.size()>0 && s[st.top()]=='('){
+//                 //valid so collect the potential ans
+//                 if(s[st.top()]=='('){
+//                     st.pop();
+//                     int len = i - st.top();
+//                     ans = max(ans,len);
 //                 }else{
+//                     // Invaalid just push
 //                     st.push(i);
-//                 }            
+//                 }
+                
+//             }else{
+//                     // invalid just push
+//                     st.push(i);
 //             }
+            
 //         }
-//         return res;
+        
+//         return ans;
+        
+        
+        
 //     }
 // };
-

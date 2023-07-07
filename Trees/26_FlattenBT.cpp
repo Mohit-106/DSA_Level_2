@@ -28,83 +28,69 @@
 //         if(root){
 //             TreeNode * lcall = root->left;
 //             TreeNode * rcall = root->right;
-            
 //             if(prev){
 //                 prev->left = NULL;
 //                 prev->right = root;
 //             }
 //             prev = root;
-            
 //             flatten(lcall);
-//             flatten(rcall);
-            
-//         }
-       
-            
-            
-    
-        
+//             flatten(rcall);         
+//         }      
 //     }
 // };
 
-//Pair Approach
 
-// class Pair {
-//     public:
-//     TreeNode * head;
-//     TreeNode * tail;
-// };
+
+
+
+
 // class Solution {
 // public:
-    
-//     Pair * helper(TreeNode * node){
-        
-//            if(node->left !=NULL && node->right!=NULL){
-//            Pair*  left = helper(node->left);
-//            Pair * right = helper(node->right);
-//            Pair * newpair =  new Pair();
-//            node->left = NULL;
-//            node->right = left->head;
-//            left->tail->right = right->head;
-//            newpair->head = node;
-//            newpair->tail = right->tail;
-//            return newpair; 
-           
-//        }else if (node->left!=NULL){
-           
-//            Pair*  left = helper(node->left);
-//            Pair * newpair =  new Pair();
-//            node->left = NULL;
-//            node->right = left->head;
-//            newpair->head = node;
-//            newpair->tail = left->tail;
-//            return newpair; 
-           
-//        }else if(node->right != NULL){
-//            Pair*  right = helper(node->right);
-//            Pair * newpair =  new Pair();
-//            node->left = NULL;
-//            node->right = right->head;
-//            newpair->head = node;
-//            newpair->tail = right->tail;
-//            return newpair; 
-           
-//        }else{
+
+//    class Pair{
+
+//        public:
+//        TreeNode * head=NULL;
+//        TreeNode * tail=NULL;
+
+//    };
+
+//    Pair * solver(TreeNode * root){
+
+//        if(root==NULL){
 //            Pair * base = new Pair();
-//            base->head = node;
-//            base->tail = node;
 //            return base;
 //        }
-        
-        
-//     }
-    
+
+//        Pair * left = solver(root->left);
+//        Pair * right =  solver(root->right);
+//        Pair * newPair = new Pair();
+//        if((left->head == NULL && left->tail == NULL) && (right->head == NULL && right->tail == NULL)){
+//            newPair->head = root;
+//            newPair->tail = root;
+//        }else if(left->head ==  NULL && left->tail == NULL){
+//            root->right = right->head;
+//            newPair->head = root;
+//            newPair->tail = right->tail;
+//            root->left == NULL;
+//        }else if(right->head ==  NULL && right->tail == NULL){
+//            root->right = left->head;
+//            newPair->head = root;
+//            newPair->tail = left->tail;
+//            root->left =  NULL;
+//        }else{
+//            root->right = left->head;
+//            left->tail->right = right->head;
+//            newPair->head = root;
+//            newPair->tail = right->tail;
+//            root->left = NULL;
+//        }
+//        return newPair;
+
+//    }
+
+
 //     void flatten(TreeNode* root) {
-//         if(root==NULL){
-//             return;
-//         }
-        
-//         Pair * ans = helper(root);
-        
+//         solver(root);
 //     }
 // };

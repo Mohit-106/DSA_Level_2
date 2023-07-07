@@ -206,3 +206,84 @@
 //     }
 
 // }
+
+//AVL
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Node{
+
+    public:
+    int val;
+    Node * left;
+    Node * right;
+    int height;
+    int balance;
+
+    Node(int val){
+        this->val  = val;
+    }
+
+};
+
+int Height(Node * root){
+
+    if(root==NULL){
+        return 0;
+    }
+    return max(Height(root->left),Height(root->right)) + 1;
+
+}
+
+int Balance(Node * root){
+    if(root==NULL){
+        return 0;
+    }
+    return (root->left != NULL ? root->left->height : 0) - (root->right!=NULL ? root->right->height : 0);
+}
+
+Node * Construct(vector<int>&arr, int lo, int hi){
+    if(lo>hi){
+        return NULL;
+    }
+
+    int mid = (lo+hi)/2;
+    Node * root = new Node(arr[mid]);
+
+    root->left = Construct(arr,lo,mid-1);
+    root->right = Construct(arr,mid+1,hi);
+
+    root->height = Height(root);
+    root->balance = Balance(root);
+
+    return root;
+
+
+}
+
+void Display(Node * root){
+
+    if(root==NULL){
+        return;
+    }
+    root->left!=NULL ? cout<<root->left->val<<"<-" : cout<<"."<<"<-";
+    cout<<root->val<<" ";
+    root->right!=NULL ? cout<<root->right->val<<"->" : cout<<"."<<"->";
+    cout<<"[Height= "<<root->height<<"] "<<"[Balance= "<<root->balance<<"] "<<endl;
+    Display(root->left);
+    Display(root->right);
+
+}
+
+
+
+int main(){
+    cout<<"Start"<<endl;
+    vector<int>arr = {10, 12, 20, 25, 30, 37, 40, 50, 60, 62, 70, 75, 80, 87, 90};
+    Node * root = Construct(arr,0,arr.size()-1);
+    cout<<root->val<<endl;
+    Display(root);;
+}
+
+
