@@ -16,7 +16,6 @@
 //                    int spare = val - sob;
 //                    ops += ((spare+sob-1)/sob);
 //                }
-               
 //            }
 //            if(ops>maxOperations){
 //                lbsa=sob+1;

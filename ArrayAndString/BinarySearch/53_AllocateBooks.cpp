@@ -1,47 +1,46 @@
-//https://www.interviewbit.com/problems/allocate-books/
-
-// int Solution::books(vector<int> &A, int B)
+// class Solution 
 // {
-//     if (B > A.size())
+//     public:
+//     //Function to find minimum number of pages.
+//     int findPages(int nums[], int n, int s) 
 //     {
-//         return -1;
-//     }
-//     int minPagesAllowed = INT_MIN;
-//     int maxPagesAllowed = 0;
-//     for (int &pages : A)
-//     {
-//         minPagesAllowed = max(minPagesAllowed, pages); // in case there are n students
-//         maxPagesAllowed += pages;                      // in case there is only one student;
-//     }
-
-//     while (minPagesAllowed < maxPagesAllowed)
-//     {   
-//         //what if these are the max pages we can allot to one student 
-//         int allot = (minPagesAllowed + maxPagesAllowed) / 2; // maximum number of book alloted
-//         int std = 1;
-//         int pages = 0;
-//         for (int &val : A)
-//         {
-//             if (pages + val <= allot)
-//             {
-//                 pages += val;
+//         if(n<s){
+//             return -1;
+//         }
+//         int lo = INT_MIN; // in case of n books and n students
+//         int hi = 0; // in case of n books and 1 student
+        
+//         for(int i=0; i<n;i++){
+//             lo=max(lo,nums[i]);
+//             hi+=nums[i];
+//         }
+        
+//         while(lo<hi){
+//             //let these are the min pages for a student
+//             int mid = (lo+hi)/2;
+            
+//             int cpages = 0;
+//             int students = 1;
+//             for(int i=0; i<n; i++){
+//                 if(cpages + nums[i] <= mid){
+//                     cpages+=nums[i];
+//                 }else{
+//                     students++;
+//                     cpages=nums[i];
+//                 }
 //             }
-//             else
-//             {
-//                 std++;
-//                 pages = val;
+            
+//             if(students<=s){
+//                 hi = mid;
+//             }else{
+//                 lo = mid+1;
 //             }
+            
+            
 //         }
-
-//         if (std > B)
-//         {
-//             minPagesAllowed = allot + 1;
-//         }
-//         else
-//         {
-//             maxPagesAllowed = allot;
-//         }
+//         return lo;
+        
+        
+        
 //     }
-
-//     return maxPagesAllowed;
-// }
+// };
