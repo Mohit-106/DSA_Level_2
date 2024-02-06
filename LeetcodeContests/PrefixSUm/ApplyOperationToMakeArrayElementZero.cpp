@@ -1,41 +1,38 @@
-// Leetcode 2772
 
-// class Solution {
+// // Sliding window
+
+// class Solution{
 // public:
-//     bool checkArray(vector<int>& nums, int k) {
+//     int maximumBeauty(vector<int>& nums, int k){
 
+//         sort(nums.begin(),nums.end());
+
+//         int i=0;
+//         int j=0;
 //         int n = nums.size();
-//         vector<long>parr(n+1,0);
-//         //this means we need nums[0] number of operations to make this array element zero
-//         parr[0]+=nums[0];
-//         parr[k]-=nums[0];
 
-//         for(int i=1; i<n; i++){
+//         int ans=0;
 
-//             parr[i]+=parr[i-1];
+//         while(i<n){
 
-//             //This means we have done just enough operatins to make it zero
-//             if(parr[i] == nums[i]){
-//                 continue;
+//             //acquire and collect ans
+
+//             while(i<n){
+//                 if(nums[i]-k-nums[j]-k <=0) ans=max(ans,(i-j+1));
+//                 if(nums[i]-k-nums[j]-k > 0) break;
+//                 i++;
 //             }
 
-//             // In case operations are more then we can say numbert has became negative
-//             if(parr[i] > nums[i]){
-//                 return false;
+//             while(i<n && j<i){
+//                 if(nums[i]-k-nums[j]-k <=0) break;
+//                 j++;
 //             }
 
-//             // if we need to perform more operations but window left is less then k
-//             if(i+k-1 >= n){
-//                 return false;
-//             }
-
-//             //perform operations
-//             long ops = (long)nums[i] - parr[i];
-//             parr[i]+=ops;
-//             parr[i+k]-=ops;
 //         }
 
-//         return true;
+//         return ans;
+
+
 
 //     }
 // };

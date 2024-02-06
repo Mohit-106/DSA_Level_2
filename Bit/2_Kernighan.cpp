@@ -9,7 +9,6 @@ public:
         while (n != 0)
         {
             int rmsb = n & -n;
-            // when we subtract rmsb mask to an number then it will make rmsb to zero
             n -= rmsb;
             count++;
         }

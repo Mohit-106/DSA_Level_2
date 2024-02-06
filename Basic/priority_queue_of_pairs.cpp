@@ -21,15 +21,10 @@ public:
 };
 
 class comp{
-
     public:
-
     bool operator()(Pair * p1, Pair * p2){
-        
         return p1->k > p2->k;
-       
     }
-
 };
 
 bool compArray(int i, int j){
